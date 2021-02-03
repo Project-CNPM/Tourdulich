@@ -20,9 +20,9 @@ public class DiaDiemDLMapper implements RowMapper<DiaDiemDLModel>{
         try {
 			DiaDiemDLModel diaDiem = new DiaDiemDLModel();
                         
-			diaDiem.setId(resultSet.getLong("id"));
+			diaDiem.setId(resultSet.getLong("madd"));
 			diaDiem.setDiaChi(resultSet.getString("diachi"));
-			diaDiem.setTenDiaDiem(resultSet.getString("tendiadiem"));
+			diaDiem.setTenDiaDiem(resultSet.getString("tendd"));
 			return diaDiem;
 		} catch (SQLException e) {
 			return null;
