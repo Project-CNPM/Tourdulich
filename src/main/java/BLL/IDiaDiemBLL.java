@@ -5,7 +5,7 @@
  */
 package BLL;
 
-import DTO.DiaDiemDLModel;
+import DTO.DiaDiemModel;
 import java.util.List;
 
 /**
@@ -13,6 +13,6 @@ import java.util.List;
  * @author hocgioinhatlop
  */
 public interface IDiaDiemBLL  {
-    List<DiaDiemDLModel> findAll();
+    List<DiaDiemModel> findAll();
     
 }
