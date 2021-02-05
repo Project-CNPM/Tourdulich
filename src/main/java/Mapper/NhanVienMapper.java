@@ -2,15 +2,15 @@ package Mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import DTO.NhanVienDLModel;
+import DTO.NhanVienModel;
 
-public class NhanVienDLMapper implements RowMapper<NhanVienDLModel> {
+public class NhanVienMapper implements RowMapper<NhanVienModel> {
 
 	@Override
-	public NhanVienDLModel mapRow(ResultSet resultSet) {
+	public NhanVienModel mapRow(ResultSet resultSet) {
 		try {
-			NhanVienDLModel nhanVien = new NhanVienDLModel();
-			nhanVien.setMaNhanVien(resultSet.getInt("manv"));
+			NhanVienModel nhanVien = new NhanVienModel();
+			nhanVien.setId(resultSet.getInt("manv"));
 			nhanVien.setTenNhanVien(resultSet.getString("tennv"));
 			nhanVien.setGioiTinh(resultSet.getString("gioitinh"));
 			nhanVien.setNgaySinh(resultSet.getDate("ngaysinh"));

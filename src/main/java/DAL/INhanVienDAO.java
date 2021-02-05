@@ -1,9 +1,10 @@
-package BLL;
+package DAL;
 
 import java.util.List;
 
 import DTO.NhanVienModel;
 
-public interface INhanVienBLL {
+public interface INhanVienDAO extends GenericDAO<NhanVienModel> {
 	List<NhanVienModel> findAll();
+
 }

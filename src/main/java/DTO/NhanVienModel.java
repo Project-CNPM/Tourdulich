@@ -2,8 +2,7 @@ package DTO;
 
 import java.sql.Date;
 
-public class NhanVienDLModel extends AbstractModel<NhanVienDLModel> {
-	private  int maNhanVien;
+public class NhanVienModel extends AbstractModel<NhanVienModel> {
 	private String tenNhanVien;
 	private String gioiTinh;
 	private Date ngaySinh;
@@ -11,12 +10,6 @@ public class NhanVienDLModel extends AbstractModel<NhanVienDLModel> {
 	private int sdt;
 	private int chucvu_MACV;
 	
-	public int getMaNhanVien() {
-		return maNhanVien;
-	}
-	public void setMaNhanVien(int maNhanVien) {
-		this.maNhanVien = maNhanVien;
-	}
 	public String getTenNhanVien() {
 		return tenNhanVien;
 	}

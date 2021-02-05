@@ -5,10 +5,12 @@
  */
 package GUI;
 
+import BLL.impl.ChucVuBLL;
 import BLL.impl.DiaDiemBLL;
 import BLL.impl.NhanVienBLL;
+import DTO.ChucVuModel;
 import DTO.DiaDiemDLModel;
-import DTO.NhanVienDLModel;
+import DTO.NhanVienModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +21,8 @@ import java.util.List;
  */
 public class TestKetNoiCSDL extends javax.swing.JFrame {
 
-    private List<NhanVienDLModel> result=new ArrayList<NhanVienDLModel>();
-    private NhanVienBLL nhanVienBLL = new NhanVienBLL();
+    private List<ChucVuModel> result = new ArrayList<ChucVuModel>();
+    private ChucVuBLL chucVUBLL = new ChucVuBLL();
     public TestKetNoiCSDL() {
         initComponents();
         
@@ -93,8 +95,8 @@ public class TestKetNoiCSDL extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       
-       result= nhanVienBLL.findAll();
-       jLabel2.setText(result.get(0).getTenNhanVien());
+       result= chucVUBLL.findAll();
+       jLabel2.setText(result.get(0).getTenChucVu());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
