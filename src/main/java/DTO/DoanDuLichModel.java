@@ -2,20 +2,20 @@ package DTO;
 
 import java.sql.Date;
 
-public class DoanDLModel extends AbstractModel<DoanDLModel> {
-	private int maDoan;
+public class DoanDuLichModel extends AbstractModel<DoanDuLichModel> {
+	//private int maDoan;
     private String tenDoan;
     private Date ngayKH;
     private Date ngayKT;
     private String chiPhi;
     private String mota;
     
-	public int getMaDoan() {
-		return maDoan;
-	}
-	public void setMaDoan(int maDoan) {
-		this.maDoan = maDoan;
-	}
+//	public int getMaDoan() {
+//		return maDoan;
+//	}
+//	public void setMaDoan(int maDoan) {
+//		this.maDoan = maDoan;
+//	}
 	public String getTenDoan() {
 		return tenDoan;
 	}

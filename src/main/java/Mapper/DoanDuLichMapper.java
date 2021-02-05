@@ -3,15 +3,15 @@ package Mapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import DTO.DoanDLModel;
+import DTO.DoanDuLichModel;
 
-public class DoanDLMapper implements RowMapper<DoanDLModel> {
+public class DoanDuLichMapper implements RowMapper<DoanDuLichModel> {
 
 	@Override
-	public DoanDLModel mapRow(ResultSet rs) {
+	public DoanDuLichModel mapRow(ResultSet rs) {
 		try {
-			DoanDLModel doanDL = new DoanDLModel();            
-			doanDL.setMaDoan(rs.getInt("madoan"));
+			DoanDuLichModel doanDL = new DoanDuLichModel();            
+			//doanDL.setMaDoan(rs.getInt("madoan"));
 			doanDL.setTenDoan(rs.getString("tendoan"));
 			doanDL.setNgayKH(rs.getDate("ngaykh"));
 			doanDL.setNgayKT(rs.getDate("ngaykt"));

@@ -5,8 +5,10 @@
  */
 package GUI;
 
-import BLL.impl.DoanDLBLL;
-import DTO.DoanDLModel;
+import BLL.impl.TourBLL;
+import DTO.TourModel;
+//import BLL.impl.DoanDuLichBLL;
+//import DTO.DoanDuLichModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +19,10 @@ import java.util.List;
  */
 public class TestKetNoiCSDL extends javax.swing.JFrame {
 
-    private List<DoanDLModel> result = new ArrayList<DoanDLModel>();
-    private DoanDLBLL doanDLBLL = new DoanDLBLL();
+    private List<TourModel> result = new ArrayList<TourModel>();
+    private TourBLL tourBLL = new TourBLL();
+//    private List<DoanDuLichModel> result = new ArrayList<DoanDuLichModel>();
+//    private DoanDuLichBLL doanDuLichBLL = new DoanDuLichBLL();
     public TestKetNoiCSDL() {
         initComponents();
         
@@ -51,7 +55,8 @@ public class TestKetNoiCSDL extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
-        jLabel3.setText("Trong bảng có tên là: ten doan");
+        jLabel3.setText("Trong bảng có tên là: ten tour");
+        //jLabel3.setText("Trong bảng có tên là: ten doan");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,8 +96,10 @@ public class TestKetNoiCSDL extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       
-       result = doanDLBLL.findAll();
-       jLabel2.setText(result.get(0).getTenDoan());
+       result = tourBLL.findAll();
+       jLabel2.setText(result.get(0).getTenTour());
+//       result = doanDuLichBLL.findAll();
+//       jLabel2.setText(result.get(0).getTenDoan());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
