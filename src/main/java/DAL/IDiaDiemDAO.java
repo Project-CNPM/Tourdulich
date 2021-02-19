@@ -5,13 +5,13 @@
  */
 package DAL;
 
-import DTO.DiaDiemDLModel;
+import DTO.DiaDiemModel;
 import java.util.List;
 
 /**
  *
  * @author hocgioinhatlop
  */
-public interface IDiaDiemDLDAO extends GenericDAO<DiaDiemDLModel> {
-    List<DiaDiemDLModel> findAll();
+public interface IDiaDiemDAO extends GenericDAO<DiaDiemModel> {
+    List<DiaDiemModel> findAll();
 }

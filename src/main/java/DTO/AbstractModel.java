@@ -15,19 +15,19 @@ import java.util.List;
 
 public class AbstractModel<T> {
 	
-	private Long id;
+	private int id;
 	private Timestamp createdDate;
 	private Timestamp modifiedDate;
 	private String createdBy;
 	private String modifiedBy;
 
-    public Long getId() {
-        return id;
-    }
+	 public int getId() {
+	        return id;
+	    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	    public void setId(int id) {
+	        this.id = id;
+	    }
 
     public Timestamp getCreatedDate() {
         return createdDate;

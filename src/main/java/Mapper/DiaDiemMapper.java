@@ -5,7 +5,7 @@
  */
 package Mapper;
 
-import DTO.DiaDiemDLModel;
+import DTO.DiaDiemModel;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -13,16 +13,18 @@ import java.sql.SQLException;
  *
  * @author hocgioinhatlop
  */
-public class DiaDiemDLMapper implements RowMapper<DiaDiemDLModel>{
+public class DiaDiemMapper implements RowMapper<DiaDiemModel>{
 
     @Override
-    public DiaDiemDLModel mapRow(ResultSet resultSet) {
+    public DiaDiemModel mapRow(ResultSet resultSet) {
         try {
-			DiaDiemDLModel diaDiem = new DiaDiemDLModel();
+			DiaDiemModel diaDiem = new DiaDiemModel();
                         
-			diaDiem.setId(resultSet.getLong("madd"));
+			diaDiem.setId(resultSet.getInt("madd"));
 			diaDiem.setDiaChi(resultSet.getString("diachi"));
 			diaDiem.setTenDiaDiem(resultSet.getString("tendd"));
+			diaDiem.setMoTa(resultSet.getNString("mota"));
+			diaDiem.setTinhtrang(resultSet.getString("tinhtrang"));
 			return diaDiem;
 		} catch (SQLException e) {
 			return null;

@@ -5,13 +5,11 @@
  */
 package GUI;
 
-import BLL.impl.TourBLL;
-import DTO.TourModel;
-//import BLL.impl.DoanDuLichBLL;
-//import DTO.DoanDuLichModel;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import BLL.impl.KhachHangBLL;
+import DTO.KhachHangModel;
 
 /**
  *
@@ -19,10 +17,9 @@ import java.util.List;
  */
 public class TestKetNoiCSDL extends javax.swing.JFrame {
 
-    private List<TourModel> result = new ArrayList<TourModel>();
-    private TourBLL tourBLL = new TourBLL();
-//    private List<DoanDuLichModel> result = new ArrayList<DoanDuLichModel>();
-//    private DoanDuLichBLL doanDuLichBLL = new DoanDuLichBLL();
+
+    private List<KhachHangModel> result = new ArrayList<KhachHangModel>();
+    private KhachHangBLL khachHangBLL = new KhachHangBLL();
     public TestKetNoiCSDL() {
         initComponents();
         
@@ -52,11 +49,8 @@ public class TestKetNoiCSDL extends javax.swing.JFrame {
         });
 
         jLabel1.setText("Show Data đầu tiên lấy dc:");
-
         jLabel2.setText("jLabel2");
-
-        jLabel3.setText("Trong bảng có tên là: ten tour");
-        //jLabel3.setText("Trong bảng có tên là: ten doan");
+        jLabel3.setText("Trong bảng có tên là: ten nhan vien");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,10 +90,9 @@ public class TestKetNoiCSDL extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       
-       result = tourBLL.findAll();
-       jLabel2.setText(result.get(0).getTenTour());
-//       result = doanDuLichBLL.findAll();
-//       jLabel2.setText(result.get(0).getTenDoan());
+
+       result= khachHangBLL.findAll();
+       jLabel2.setText(result.get(0).getTenKH());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

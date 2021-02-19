@@ -1,8 +1,8 @@
 package DAL.impl;
 
-import DAL.IDiaDiemDLDAO;
-import DTO.DiaDiemDLModel;
-import Mapper.DiaDiemDLMapper;
+import DAL.IDiaDiemDAO;
+import DTO.DiaDiemModel;
+import Mapper.DiaDiemMapper;
 import java.util.List;
 
 /*
@@ -15,11 +15,11 @@ import java.util.List;
  *
  * @author hocgioinhatlop
  */
-public class DiaDiemDLDAO extends AbstractDAO<DiaDiemDLModel> implements IDiaDiemDLDAO {
+public class DiaDiemDAO extends AbstractDAO<DiaDiemModel> implements IDiaDiemDAO {
         @Override
-	public List<DiaDiemDLModel> findAll(){
+	public List<DiaDiemModel> findAll(){
 		String sql = "SELECT * FROM diadiem";
-		return query(sql, new DiaDiemDLMapper());
+		return query(sql, new DiaDiemMapper());
 	}
     
 }
