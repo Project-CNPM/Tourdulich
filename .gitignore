@@ -4,6 +4,8 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### trong đây là danh sách các file ko commit lên (tự động)###
+db.properties
 ### STS ###
 .apt_generated
 .classpath
@@ -31,3 +33,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/bin/

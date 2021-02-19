@@ -6,9 +6,9 @@
 package BLL.impl;
 
 import BLL.IDiaDiemBLL;
-import DAL.IDiaDiemDLDAO;
-import DAL.impl.DiaDiemDLDAO;
-import DTO.DiaDiemDLModel;
+import DAL.IDiaDiemDAO;
+import DAL.impl.DiaDiemDAO;
+import DTO.DiaDiemModel;
 import java.util.List;
 import javax.inject.Inject;
 
@@ -18,11 +18,11 @@ import javax.inject.Inject;
  */
 public class DiaDiemBLL implements IDiaDiemBLL {
       
-	private IDiaDiemDLDAO diaDiemDao;
+	private IDiaDiemDAO diaDiemDao;
         
 	@Override
-	public List<DiaDiemDLModel> findAll() {
-        diaDiemDao=new DiaDiemDLDAO();
+	public List<DiaDiemModel> findAll() {
+        diaDiemDao=new DiaDiemDAO();
 	return diaDiemDao.findAll();
 	}
     

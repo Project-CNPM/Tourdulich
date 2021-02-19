@@ -9,11 +9,29 @@ package DTO;
  *
  * @author hocgioinhatlop
  */
-public class DiaDiemDLModel extends AbstractModel<DiaDiemDLModel> {
+public class DiaDiemModel extends AbstractModel<DiaDiemModel> {
     private String tenDiaDiem;
     private String diaChi;
+    private String moTa;
+    private String tinhtrang;
 
-    public String getTenDiaDiem() {
+    public String getMoTa() {
+		return moTa;
+	}
+
+	public void setMoTa(String moTa) {
+		this.moTa = moTa;
+	}
+
+	public String getTinhtrang() {
+		return tinhtrang;
+	}
+
+	public void setTinhtrang(String tinhtrang) {
+		this.tinhtrang = tinhtrang;
+	}
+
+	public String getTenDiaDiem() {
         return tenDiaDiem;
     }
 
