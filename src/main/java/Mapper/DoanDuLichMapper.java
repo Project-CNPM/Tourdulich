@@ -10,13 +10,14 @@ public class DoanDuLichMapper implements RowMapper<DoanDuLichModel> {
 	@Override
 	public DoanDuLichModel mapRow(ResultSet rs) {
 		try {
-			DoanDuLichModel doanDL = new DoanDuLichModel();            
-			//doanDL.setMaDoan(rs.getInt("madoan"));
-			doanDL.setTenDoan(rs.getString("tendoan"));
-			doanDL.setNgayKH(rs.getDate("ngaykh"));
-			doanDL.setNgayKT(rs.getDate("ngaykt"));
-			doanDL.setChiPhi(rs.getString("chiphi"));
-			doanDL.setMota(rs.getString("mota"));
+			DoanDuLichModel doanDL = new DoanDuLichModel();    
+                        doanDL.setId(rs.getInt("doan_id"));
+			doanDL.setGiaTour(rs.getBigDecimal("doan_giatour").doubleValue());
+                        doanDL.setTour_id(rs.getInt("tour_id"));
+			doanDL.setTenDoan(rs.getString("doan_name"));
+			doanDL.setNgayDi(rs.getDate("doan_ngaydi"));
+			doanDL.setNgayVe(rs.getDate("doan_ngayve"));
+			doanDL.setMoTa(rs.getString("doan_chitietchuongtrinh"));
 			return doanDL;
 		} catch (SQLException e) {
 			return null;

@@ -20,11 +20,11 @@ public class DiaDiemMapper implements RowMapper<DiaDiemModel>{
         try {
 			DiaDiemModel diaDiem = new DiaDiemModel();
                         
-			diaDiem.setId(resultSet.getInt("madd"));
-			diaDiem.setDiaChi(resultSet.getString("diachi"));
-			diaDiem.setTenDiaDiem(resultSet.getString("tendd"));
-			diaDiem.setMoTa(resultSet.getNString("mota"));
-			diaDiem.setTinhtrang(resultSet.getString("tinhtrang"));
+			diaDiem.setId(resultSet.getInt("dd_id"));
+			diaDiem.setThanhPho(resultSet.getString("dd_thanhpho"));
+			diaDiem.setTenDiaDiem(resultSet.getString("dd_ten"));
+			diaDiem.setMoTa(resultSet.getNString("dd_mota"));
+			//diaDiem.setTinhtrang(resultSet.getString("tinhtrang"));
 			return diaDiem;
 		} catch (SQLException e) {
 			return null;

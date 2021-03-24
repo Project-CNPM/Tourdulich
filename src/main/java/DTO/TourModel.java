@@ -1,34 +1,44 @@
 package DTO;
 
+import java.util.List;
+
 
 public class TourModel extends AbstractModel<TourModel> {
 	//private int maTour;
     private String tenTour;
-    private String dacDiem;
+    private String moTa;
     private String diemKH;
     private String diemDen;
-    private String phuongTien;
-    private String chiPhi;
-    private int loaidulich_MaLoai;
+    private int loai_id;
+    private int gia_id;
+     private List<DiaDiemModel> listDiaDiem;
+
+    public int getGia_id() {
+        return gia_id;
+    }
+
+    public void setGia_id(int gia_id) {
+        this.gia_id = gia_id;
+    }
+   
     
-    //	public int getMaTour() {
-//		return maTour;
-//	}
-//	public void setMaTour(int maTour) {
-//		this.maTour = maTour;
-//	}
+
+    public List<DiaDiemModel> getListDiaDiem() {
+        return listDiaDiem;
+    }
+
+    public void setListDiaDiem(List<DiaDiemModel> listDiaDiem) {
+        this.listDiaDiem = listDiaDiem;
+    }
+        
+        
 	public String getTenTour() {
 		return tenTour;
 	}
 	public void setTenTour(String tenTour) {
 		this.tenTour = tenTour;
 	}
-	public String getDacDiem() {
-		return dacDiem;
-	}
-	public void setDacDiem(String dacDiem) {
-		this.dacDiem = dacDiem;
-	}
+	
 	public String getDiemKH() {
 		return diemKH;
 	}
@@ -41,23 +51,23 @@ public class TourModel extends AbstractModel<TourModel> {
 	public void setDiemDen(String diemDen) {
 		this.diemDen = diemDen;
 	}
-	public String getPhuongTien() {
-		return phuongTien;
-	}
-	public void setPhuongTien(String phuongTien) {
-		this.phuongTien = phuongTien;
-	}
-	public String getChiPhi() {
-		return chiPhi;
-	}
-	public void setChiPhi(String chiPhi) {
-		this.chiPhi = chiPhi;
-	}
-	public int getLoaidulich_MaLoai() {
-		return loaidulich_MaLoai;
-	}
-	public void setLoaidulich_MaLoai(int loaidulich_MaLoai) {
-		this.loaidulich_MaLoai = loaidulich_MaLoai;
-	}
+
+    public String getMoTa() {
+        return moTa;
+    }
+
+    public void setMoTa(String moTa) {
+        this.moTa = moTa;
+    }
+
+    public int getLoai_id() {
+        return loai_id;
+    }
+
+    public void setLoai_id(int loai_id) {
+        this.loai_id = loai_id;
+    }
+	
+	
 
 }

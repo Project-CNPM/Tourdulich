@@ -12,14 +12,12 @@ public class KhachHangMapper implements RowMapper<KhachHangModel> {
 	public KhachHangModel mapRow(ResultSet resultSet) {
 		try {
 			KhachHangModel khachHang = new KhachHangModel();
-			khachHang.setId(resultSet.getInt("makh"));
-			khachHang.setTenKH(resultSet.getString("tenkh"));
-			khachHang.setGioiTinh(resultSet.getString("gioitinh"));
-			khachHang.setDiaChi(resultSet.getString("diachi"));
-			khachHang.setNgaySinh(resultSet.getDate("ngaysinh"));
-			khachHang.setCmnd(resultSet.getInt("cmnd"));
-			khachHang.setQuocTich(resultSet.getString("quoctich"));
-			khachHang.setDoanDuLich_MaDoan(resultSet.getInt("doandulich_madoan"));
+			khachHang.setId(resultSet.getInt("kh_id"));
+			khachHang.setTenKH(resultSet.getString("kh_ten"));
+			khachHang.setSdt(resultSet.getString("kh_sdt"));
+			khachHang.setNgaySinh(resultSet.getDate("kh_ngaysinh"));
+			khachHang.setCmnd(resultSet.getString("kh_cmnd"));
+			khachHang.setEmail(resultSet.getString("kh_email"));
 			return khachHang ;
 		} catch (SQLException e) {
 			return null;

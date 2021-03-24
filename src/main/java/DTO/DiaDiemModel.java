@@ -11,7 +11,7 @@ package DTO;
  */
 public class DiaDiemModel extends AbstractModel<DiaDiemModel> {
     private String tenDiaDiem;
-    private String diaChi;
+    private String thanhPho;
     private String moTa;
     private String tinhtrang;
 
@@ -33,18 +33,20 @@ public class DiaDiemModel extends AbstractModel<DiaDiemModel> {
 
 	public String getTenDiaDiem() {
         return tenDiaDiem;
-    }
+        }
 
-    public void setTenDiaDiem(String tenDiaDiem) {
-        this.tenDiaDiem = tenDiaDiem;
-    }
+        public void setTenDiaDiem(String tenDiaDiem) {
+            this.tenDiaDiem = tenDiaDiem;
+        }
 
-    public String getDiaChi() {
-        return diaChi;
-    }
+        public String getThanhPho() {
+            return thanhPho;
+        }
 
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
-    }
+        public void setThanhPho(String thanhPho) {
+            this.thanhPho = thanhPho;
+        }
+
+    
     
 }

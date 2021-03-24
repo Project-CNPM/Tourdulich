@@ -10,13 +10,13 @@ public class NhanVienMapper implements RowMapper<NhanVienModel> {
 	public NhanVienModel mapRow(ResultSet resultSet) {
 		try {
 			NhanVienModel nhanVien = new NhanVienModel();
-			nhanVien.setId(resultSet.getInt("manv"));
-			nhanVien.setTenNhanVien(resultSet.getString("tennv"));
-			nhanVien.setGioiTinh(resultSet.getString("gioitinh"));
-			nhanVien.setNgaySinh(resultSet.getDate("ngaysinh"));
-			nhanVien.setDiaChi(resultSet.getString("diachi"));
-			nhanVien.setSdt(resultSet.getInt("sdt"));
-			nhanVien.setChucvu_MACV(resultSet.getInt("chucvu_macv"));
+			nhanVien.setId(resultSet.getInt("nv_id"));
+			nhanVien.setTenNhanVien(resultSet.getString("nv_ten"));
+			nhanVien.setSdt(resultSet.getString("nv_sdt"));
+			nhanVien.setNgaySinh(resultSet.getDate("nv_ngaysinh"));
+			nhanVien.setEmail(resultSet.getString("nv_email"));
+			nhanVien.setNhiemVu(resultSet.getString("nv_nhiemvu"));
+			
 			return nhanVien ;
 		} catch (SQLException e) {
 			return null;

@@ -14,5 +14,14 @@ import java.util.List;
  */
 public interface IDiaDiemBLL  {
     List<DiaDiemModel> findAll();
-    
+    DiaDiemModel save(DiaDiemModel newModel);
+    DiaDiemModel update(DiaDiemModel updateNew);
+    void delete(int[] ids);
+    DiaDiemModel save(DiaDiemModel model,int idTour);
+    void AddDiaDiemToTour(int idDd,int idTour);
+    void DeleteDiaDiemToTour(int idDd,int idTour);
+    boolean findOneInTour(int idTour, int idDiaDiem);
+    List<DiaDiemModel> findByThanhPho(String thanhPho);
+    void AddDiaDiemToTour(List<Integer> idDd,int idTour);
+    void DeleteAllDiaDiemInTour(int idTour);
 }

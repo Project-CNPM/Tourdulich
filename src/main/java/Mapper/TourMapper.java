@@ -11,14 +11,13 @@ public class TourMapper implements RowMapper<TourModel> {
 	public TourModel mapRow(ResultSet rs) {
 		try {
 			TourModel tour = new TourModel();            
-			//tour.setMaTour(rs.getInt("matour"));
-			tour.setTenTour(rs.getString("tentour"));
-			tour.setDacDiem(rs.getString("dacdiem"));
+			tour.setId(rs.getInt("tour_id"));
+			tour.setTenTour(rs.getString("tour_ten"));
+                        tour.setMoTa(rs.getString("tour_mota"));
 			tour.setDiemKH(rs.getString("diemkh"));
 			tour.setDiemDen(rs.getString("diemden"));
-			tour.setPhuongTien(rs.getString("phuongtien"));
-			tour.setChiPhi(rs.getString("chiphi"));
-			tour.setLoaidulich_MaLoai(rs.getInt("loaidulich_maloai"));
+			tour.setLoai_id(rs.getInt("loai_id"));
+                        tour.setGia_id(rs.getInt("gia_id"));
 			return tour;
 		} catch (SQLException e) {
 			return null;
